@@ -2,4 +2,57 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
+    <h2>NHẬP ĐIỂM THI</h2>
+    <hr />
+
+    <div style="padding: 10px">
+        Chọn môn học
+        <asp:DropDownList ID="ddlMonHoc" runat="server" DataSourceID="odsMonHoc"
+            DataTextField="TenMH" DataValueField="MaMH" AutoPostBack="true">
+        </asp:DropDownList>
+    </div>
+
+    <asp:GridView ID="gvKetQua" ShowFooter="true" DataKeyNames="id" runat="server" DataSourceID="odsKetQua"
+        AutoGenerateColumns="false" CssClass="table table-bordered" Width="70%">
+        <Columns>
+            <asp:BoundField DataField="MaSV" HeaderText="MaSV" />
+            <asp:BoundField DataField="HoTenSV" HeaderText="Họ tên sinh viên" />
+            <asp:TemplateField HeaderText="Điểm thi">
+                <ItemTemplate>
+                    <asp:TextBox ID="txtDiem" runat="server" Text='<%# ("Diem") %>' CssClass="form-control"></asp:TextBox>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:Button ID="btLuu" runat="server" Text="Lưu điểm" CssClass="btn btn-success" OnClick="btLuu_Click">
+                     
+                    </asp:Button>
+                </FooterTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Chọn xoá" ItemStyle-HorizontalAlign="Center">
+                <HeaderTemplate>
+                    <asp:CheckBox ID="chkAll" runat="server" Text="Chọn tất cả" AutoPostBack="true" OnCheckedChanged="chkAll_CheckedChanged" />
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <asp:CheckBox runat="server" ID="cbxChon" />
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:Button ID="btXoa" OnClientClick="return confirm('Bạn có muốn xóa điểm này không?')" runat="server" Text="Xoá" CssClass="btn btn-success" OnClick="btXoa_Click">
+                       
+                    </asp:Button>
+                </FooterTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <EmptyDataTemplate>
+            <div class="alert alert-warning">
+                Không có sinh viên 
+            </div>
+        </EmptyDataTemplate>
+    </asp:GridView>
+
+    <asp:ObjectDataSource ID="odsKetQua" runat="server"
+        SelectMethod="getByMaMH" TypeName="WebQLDaoTao_1.Models.KetQuaDAO">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="ddlMonHoc" Name="mamh" PropertyName="SelectedValue" Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsMonHoc" runat="server" SelectMethod="getAll" TypeName="WebQLDaoTao_1.Models.MonHocDAO"></asp:ObjectDataSource>
 </asp:Content>

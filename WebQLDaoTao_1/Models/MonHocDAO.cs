@@ -31,7 +31,7 @@ namespace WebQLDaoTao_1.Models
         public int Update(MonHoc mh)
         {
             //1.Mo ket noi CSDL
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["QLDaoTao_1_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_1_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("update monhoc set tenmh=@tenmh, sotiet=@sotiet where mamh=@mamh", conn);
@@ -57,7 +57,7 @@ namespace WebQLDaoTao_1.Models
         public int Insert(string mamh, string tenmh, int sotiet)
         {
             SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_1_ConStr"].ConnectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand("insert into monhoc (mamh, tenmh,sotiet) values (@mamh,@tenmh,@sotiet)", conn);
             cmd.Parameters.AddWithValue("@mamh", mamh);
