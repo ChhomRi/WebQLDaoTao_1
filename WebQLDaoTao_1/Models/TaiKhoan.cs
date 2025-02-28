@@ -7,8 +7,9 @@ namespace WebQLDaoTao_1.Models
 {
     public class TaiKhoan
     {
-        public string TenDN { set; get; }
+        public string TenDangNhap { set; get; }
         public string MatKhau { set; get; }
         public string VaiTro { set; get; }
+        public object TenDN { get; internal set; }
     }
 }

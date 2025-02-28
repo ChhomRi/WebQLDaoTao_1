@@ -19,7 +19,7 @@
             <asp:BoundField DataField="HoTenSV" HeaderText="Họ tên sinh viên" />
             <asp:TemplateField HeaderText="Điểm thi">
                 <ItemTemplate>
-                    <asp:TextBox ID="txtDiem" runat="server" Text='<%# ("Diem") %>' CssClass="form-control"></asp:TextBox>
+                       <asp:TextBox ID="txtDiem" runat="server" Text='<%# Eval("Diem") %>' CssClass="form-control" AutoPostBack="true"></asp:TextBox>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:Button ID="btLuu" runat="server" Text="Lưu điểm" CssClass="btn btn-success" OnClick="btLuu_Click">

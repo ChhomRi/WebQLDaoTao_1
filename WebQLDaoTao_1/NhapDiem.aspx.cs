@@ -8,7 +8,7 @@ using WebQLDaoTao_1.Models;
 
 namespace WebQLDaoTao_1
 {
-    public partial class NhapDiem : System.Web.UI.Page
+    public partial class NhapDiem : SecurePage
     {
         KetQuaDAO kqDAO = new KetQuaDAO();
         protected void Page_Load(object sender, EventArgs e)

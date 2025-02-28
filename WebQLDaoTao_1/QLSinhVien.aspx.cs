@@ -8,7 +8,7 @@ using WebQLDaoTao_1.Models;
 
 namespace WebQLDaoTao_1
 {
-    public partial class QLSinhVien : System.Web.UI.Page
+    public partial class QLSinhVien : SecurePage
     {
         SinhVienDAO svDAO = new SinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
