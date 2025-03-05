@@ -48,6 +48,25 @@
                         </li>
                         <li><a href="#">Quản lý điểm thi</a></li>
                     </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                <asp:PlaceHolder ID="phDangNhap" runat="server">
+                    <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                   
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="phTaiKhoan" runat="server" Visible="false">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-user"></span>
+                            <asp:Label ID="lblUser" runat="server" />
+                        </a>
+                    </li>
+                    <li>
+                        <asp:LinkButton ID="btnLogout" runat="server" CssClass="nav-link" OnClick="btnLogout_Click">
+                            <span class="glyphicon glyphicon-log-out"></span> Đăng xuất
+                        </asp:LinkButton>
+                    </li>
+                </asp:PlaceHolder>
+            </ul>
                 </div>
             </div>
         </nav>

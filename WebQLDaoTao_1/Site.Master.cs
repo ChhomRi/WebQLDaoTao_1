@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebQLDaoTao_1.Models;
 
 namespace WebQLDaoTao_1
 {
@@ -11,7 +12,28 @@ namespace WebQLDaoTao_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["TaiKhoan"] != null)
+                {
+                    TaiKhoan user = (TaiKhoan)Session["TaiKhoan"];
+                    lblUser.Text = user.TenDangNhap;
+                    phDangNhap.Visible = false;
+                    phTaiKhoan.Visible = true;
+                }
+                else
+                {
+                    phDangNhap.Visible = true;
+                    phTaiKhoan.Visible = false;
+                }
+            }
 
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["TaiKhoan"] = null;
+            Response.Redirect("Default.aspx");
         }
     }
 }
