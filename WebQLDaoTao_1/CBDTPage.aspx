@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SecurePage.aspx.cs" Inherits="WebQLDaoTao_1.SecurePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CBDTPage.aspx.cs" Inherits="WebQLDaoTao_1.CBDTPage" %>
 
 <!DOCTYPE html>
 

@@ -18,14 +18,12 @@ namespace WebQLDaoTao_1
 
         protected void btLogin_Click(object sender, EventArgs e)
         {
-            string TenDangNhap = txtUsername.Text.Trim();
-            string MatKhau = txtPassword.Text.Trim();
-
-            TaiKhoan tk = taiKhoanDAO.DangNhap(TenDangNhap, MatKhau);
-
-            if (tk != null)
+            string TenDangNhap = txtUsername.Text;
+            string MatKhau = txtPassword.Text;
+            if (taiKhoanDAO.DangNhap(TenDangNhap,MatKhau))
             {
-                Session["TaiKhoan"] = tk;
+                Session["TenDangNhap"] = TenDangNhap;
+               // Session["VaiTro"] = tk.VaiTro;
                 Response.Redirect("Default.aspx");
             }
             else

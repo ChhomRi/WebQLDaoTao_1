@@ -15,13 +15,13 @@ namespace WebQLDaoTao_1
     {
 
         /// <summary>
-        /// txtMaKH control.
+        /// txtMaMH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaKH;
+        protected global::System.Web.UI.WebControls.TextBox txtMaMH;
 
         /// <summary>
         /// txtTenMH control.
@@ -33,13 +33,13 @@ namespace WebQLDaoTao_1
         protected global::System.Web.UI.WebControls.TextBox txtTenMH;
 
         /// <summary>
-        /// txtSoTet control.
+        /// txtSoTiet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoTet;
+        protected global::System.Web.UI.WebControls.TextBox txtSoTiet;
 
         /// <summary>
         /// btThem control.

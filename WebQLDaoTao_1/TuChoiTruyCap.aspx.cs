@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace WebQLDaoTao_1
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class TuChoiTruyCap : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btRegister_Click(object sender, EventArgs e)
         {
 
         }

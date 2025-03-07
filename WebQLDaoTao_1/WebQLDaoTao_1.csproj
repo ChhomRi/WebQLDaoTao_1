@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CBDTPage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -80,11 +81,17 @@
     <Content Include="QLKhoa.aspx" />
     <Content Include="QLMonHoc.aspx" />
     <Content Include="QLSinhVien.aspx" />
-    <Content Include="Register.aspx" />
-    <Content Include="SecurePage.aspx" />
+    <Content Include="TuChoiTruyCap.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CBDTPage.aspx.cs">
+      <DependentUpon>CBDTPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CBDTPage.aspx.designer.cs">
+      <DependentUpon>CBDTPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,26 +148,19 @@
     <Compile Include="QLSinhVien.aspx.designer.cs">
       <DependentUpon>QLSinhVien.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SecurePage.aspx.cs">
-      <DependentUpon>SecurePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SecurePage.aspx.designer.cs">
-      <DependentUpon>SecurePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TuChoiTruyCap.aspx.cs">
+      <DependentUpon>TuChoiTruyCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TuChoiTruyCap.aspx.designer.cs">
+      <DependentUpon>TuChoiTruyCap.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

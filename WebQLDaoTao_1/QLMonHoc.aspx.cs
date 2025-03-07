@@ -8,11 +8,12 @@ using WebQLDaoTao_1.Models;
 
 namespace WebQLDaoTao_1
 {
-    public partial class QLMonHoc : SecurePage
+    public partial class QLMonHoc : CBDTPage
     {
         MonHocDAO mhDAO = new MonHocDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load(sender);
             if (!Page.IsPostBack)
             {
                 NapDuLieu();
@@ -59,9 +60,9 @@ namespace WebQLDaoTao_1
             try
             {
                 //Lấy thông tin môn học cần thêm
-                string mamh = txtMaKH.Text;
+                string mamh = txtMaMH.Text;
                 string tenmh = txtTenMH.Text;
-                int sotiet = int.Parse(txtSoTet.Text);
+                int sotiet = int.Parse(txtSoTiet.Text);
                 //Tạo đối tượng môn học
                 //gọi phương thức insert của tầng DAO
                 mhDAO.Insert(mamh, tenmh, sotiet);

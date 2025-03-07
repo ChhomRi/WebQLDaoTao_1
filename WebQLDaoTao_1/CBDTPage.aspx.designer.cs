@@ -10,7 +10,7 @@
 
 namespace WebQLDaoTao_1
 {
-    public partial class SecurePage
+    public partial class CBDTPage
     {
 
         /// <summary>
